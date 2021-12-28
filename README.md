@@ -13,7 +13,7 @@ Discord Server: https://discord.gg/VU4z9AF
 ## FAQ
 
 #### When do new releases come out?
-We'll try to release an update on the 28th of every Month
+We'll try to release an update on the 28th of every other Month
 
 #### How do I install mods?
 Follow the guide here: https://zeldamods.org/wiki/Help:Using_mods

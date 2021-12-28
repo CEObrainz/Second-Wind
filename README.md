@@ -17,6 +17,7 @@ We'll try to release an update on the 28th of every Month
 
 #### How do I install mods?
 Follow the guide here: https://zeldamods.org/wiki/Help:Using_mods
+Alternatively use: https://github.com/Torphedo/BOTW-ModdingGuide/wiki/Second-Wind-Installation-Guide
 
 #### Do I install the new update alongside the old one?
 Always replace or update your old version with the latest one.
@@ -31,7 +32,7 @@ Make sure your language settings in BCML are set according to the version of the
 In BCML Second Wind should be the lowest priority with all other mods above it (Priority 100). 
 
 #### Is this on Switch?
-Not yet but eventually.
+Check out this repo: https://github.com/CEObrainz/Second-Wind-Switch
 
 #### Second Wind isn't in X Language, can I translate for you?
 Translations will occur after we've finished writing, editing and finalising texts for Part 1 of the project. This will happen approximately around July.

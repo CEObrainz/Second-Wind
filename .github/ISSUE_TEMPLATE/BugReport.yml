@@ -1,0 +1,38 @@
+name: "Bug Report"
+description: Report a bug found within Second Wind.
+title: "Bug: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: Clearly describe your issue. (Screenshots often help furthur identify the issue, drag and drop to upload)
+      placeholder: A clear description of the issue...
+    validations:
+      required: true
+  - type: textarea
+    id: reprod
+    attributes:
+      label: "Reproduction steps"
+      description: Descraibe the steps to reproduce the bug.
+      placeholder: |
+        1. Go to location '...'
+        2. Open chest '...'
+        4. See issue
+    validations:
+      required: true
+  - type: dropdown
+    id: console
+    attributes:
+      label: "Console/Emulator"
+      description: What console or emulator did the issue occur on?
+      multiple: true
+      options:
+        - WiiU
+        - Cemu
+        - Switch
+        - yuzu
+        - Ryujinx
+    validations:
+      required: true

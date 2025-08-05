@@ -27,7 +27,7 @@ Always replace or update your old version with the latest one.
 For the most part yes, this mod should work with all other mods. New armours, dialogue and other Link specific changes will of course be in their Second Wind forms. 
 
 #### I can't see any of the new text, what do I do?
-Make sure your language settings in BCML/UKMM are set according to the version of the game you're using (e.g EU for Europe) and it language (e.g en for english). Once it's set hit remerge and the issue should be fixed.
+Make sure your language settings in BCML/UKMM are set according to the version of the game you're using (e.g EU for Europe) and language (e.g en for english). Once it's set hit remerge and the issue should be fixed.
 
 #### What priority should this mod be?
 In BCML/UKMM Second Wind should be the lowest priority with all other mods above it (Priority 100 in BCML, 0 in UKMM). 

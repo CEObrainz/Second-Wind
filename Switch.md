@@ -25,7 +25,7 @@ If your Switch is already modded, skip ahead to the next section.
 
 To install Second Wind (even on-console), you must dump your copy of *Breath of the Wild* to your PC. The full dump is approximately 15 GB, so ensure both your SD card and PC have at least 20 GB of free space.
 
-Check that you are running **version 1.6.0** with **DLC version 3.0**. Nintendo's more recent updates (1.8.0+) are incompatible with most mods.
+Check that you are running **version 1.6.0** with **DLC version 3.0**. Nintendo's more recent updates (1.8.0+) are incompatible with mods.
 
 <img width="3838" height="2158" alt="465664237-3ca2a0e2-4db2-458a-a6fc-b7e12c29ba2f" src="https://github.com/user-attachments/assets/8f433f9b-8f1b-4cdc-9806-6d85fa20942c" />
 
@@ -51,28 +51,27 @@ You may delete the files from your SD card once transferred.
 
 ### Extracting RomFS in Ryubing
 
-1. Ensure BotW version 1.6.0 + DLC 3.0 is installed and shows properly on launch.
-
-<img width="1080" height="653" alt="465781022-df150629-d036-4aef-9fef-8234731bd9a4-1" src="https://github.com/user-attachments/assets/f9e6afd4-f779-46d7-9140-618485f17e72" />
+1. Ensure BotW version 1.6.0 + DLC 3.0 is installed and shows properly at the bottom right of the title screen.
    
 2. **Dump Game + Update**:
    - Right-click BotW → `Extract Data > RomFS`
    - Choose: `C:/Games/Switch/Breath of the Wild/Game+Update/romfs`
 
-<img width="1205" height="644" alt="465781035-bede96f8-90af-4bb7-afc7-f525ef059ccb" src="https://github.com/user-attachments/assets/70ccf56b-70a8-450c-ab8a-1caa31f5f0c3" />
+<img width="1080" height="653" alt="465781022-df150629-d036-4aef-9fef-8234731bd9a4-1" src="https://github.com/user-attachments/assets/f9e6afd4-f779-46d7-9140-618485f17e72" />
 
 3. **Dump DLC**:
    - Right-click BotW → `Extract Data > DLC RomFS`
    - Select `01007EF00011F001`
    - Dump to: `C:/Games/Switch/Breath of the Wild/DLC/romfs`
 
+<img width="1205" height="644" alt="465781035-bede96f8-90af-4bb7-afc7-f525ef059ccb" src="https://github.com/user-attachments/assets/70ccf56b-70a8-450c-ab8a-1caa31f5f0c3" />
 <img width="382" height="327" alt="465781098-23de6f28-42e6-4cf9-9a3f-8dab7be8789a" src="https://github.com/user-attachments/assets/57edc69c-b87e-47f9-8f47-109f11626755" />
 
 ---
 
 ## Setting Up BCML
 
-> ❗ UKMM does not currently support Switch builds reliably. This guide uses **BCML** instead.
+> ❗ UKMM does not currently support Switch builds. This guide uses **BCML** instead.
 
 ### Step 1: Install Prerequisites
 
@@ -90,7 +89,8 @@ Linux users: Refer to your distro's package manager/documentation.
    pip install bcml==3.10.4
    ```
 
-> Note: BCML 3.10.4 is preferred for compatibility with older mods. Newer versions may cause errors with some BNP v2 mods.
+> Note: BCML 3.10.4 is preferred for compatibility with older mods. Newer versions will cause a Definition error with BNP v2 mods.  
+> If you get a Syntax error when running this command, make sure that you are NOT in the Python console.
 
 3. Once installed, run:
    ```bash
@@ -109,19 +109,21 @@ Linux users: Refer to your distro's package manager/documentation.
 - **Base+Update Directory**: `C:/Games/Switch/Breath of the Wild/Game+Update/romfs`
 - **DLC Directory**: `C:/Games/Switch/Breath of the Wild/DLC/romfs`
 
-<img width="1920" height="1020" alt="465779790-a1660c22-40f7-4e4c-8814-5efae9fa293d" src="https://github.com/user-attachments/assets/1053793c-46dd-4eef-8f27-ea99bfa5535d" />
-
 > ✅ A green border confirms the path is valid.
 
 #### Options
 
-- **Game Language**: Select based on your region/language (e.g. `EU - English`, `US - French`, etc.)
+- **Game Language**: Select based on your game region and language following the `XXyy` format, where `XX` is your region (`EU`, `US`, `JP`) and `yy` your game language (`en`, `fr`, etc.)
 - **Merged Export Directory**:
   - On-console: `C:/ModPack`
   - Ryubing: `C:/Users/YourUsername/AppData/Roaming/Ryujinx/sdcard/atmosphere/contents`
 
 > Optional: Enable "Disable links for master mod" if you do not want to export directly to `C:/`
 
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/1b1e7bf8-daff-4dc6-9f13-a67cbdeaeff9" />
+
+> Here's an example of a properly configured BCML.
+ 
 Click **Save** once done.
 
 ---
@@ -170,13 +172,15 @@ Click **Save** once done.
 <summary>Final Mod Layout on microSD</summary>
 
 ```text
-SD:/
-└── atmosphere/
-    └── contents/
-        ├── 01007EF00011E000/
-        │   └── romfs/
-        └── 01007EF00011F001/
-            └── romfs/
+ 💾 SD:/
+ ├─ 📂 atmosphere/
+ │  ├─ 📂 contents/
+ │  │  ├─ 📂 01007EF00011E000/
+ │  │  │  ├─ 📂 romfs/
+ │  │  │  │  ├─ 📜 ...
+ │  │  ├─ 📂 01007EF00011F001/
+ │  │  │  ├─ 📂 romfs/
+ │  │  │  │  ├─ 📜 ...
 ```
 </details>
 

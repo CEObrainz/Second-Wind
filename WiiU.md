@@ -11,11 +11,11 @@
 
 ## Optional – Modding Your Console
 
-To play mods on actual hardware, you’ll need a modded Wii U. Modding your console does not restrict its functionality—in fact, it enables additional features such as mods and access to community-hosted online services like Pretendo. If you're planning to play via emulator, you can dump your game without a modded console.
+To play mods on actual hardware, you’ll need a modded Wii U. Modding your console does not restrict its functionality. In fact, it enables additional features such as mods and access to community-hosted online services like Pretendo. If you're planning to play via emulator, you can dump your game without a modded console.
 
 If your console is already modded with **Tiramisu**, you may proceed directly to the next section.
 
-While **Aroma** is a newer option, its implementation of **Sdcafiine**—the plugin required for loading mods—currently suffers from performance issues and instability. Therefore, we recommend using **Tiramisu** for now.
+While **Aroma** is a newer option, its implementation of **Sdcafiine**, the plugin required for loading mods, currently suffers from performance issues and instability. Therefore, we recommend using **Tiramisu** for now.
 
 To mod your console, we suggest following [this guide](https://web.archive.org/web/20240101140009/https://wiiu.hacks.guide/#/). For visual learners, you can supplement it with a video tutorial, but avoid following YouTube videos blindly. Always prefer the linked guide and **make a NAND backup** before proceeding.
 
@@ -23,7 +23,7 @@ To mod your console, we suggest following [this guide](https://web.archive.org/w
 
 ## Dumping the Game
 
-To install Second Wind (and to run it on an emulator), you must dump your copy of *Breath of the Wild* and transfer it to your PC—even if you intend to play on the console. The full dump is approximately 15 GB, so ensure you have at least 20 GB of free space on both your SD card and PC.
+To install Second Wind (and to run it on an emulator), you must dump your copy of *Breath of the Wild* and transfer it to your PC, even if you intend to play on the console. The full dump is approximately 15 GB, so ensure you have at least 20 GB of free space on both your SD card and PC.
 
 If you’ve already dumped your game using the **Dumpling** method, and you’re familiar with its file structure, you can skip to the next section.
 
@@ -62,14 +62,18 @@ If you’ve already dumped your game using the **Dumpling** method, and you’re
 
 Once finished, you’ll find a folder named `Dumpling` at the root of your SD card, containing:
 
-```text
-Dumpling/
-├── Games/
-│   └── Breath of the Wild/
-├── Updates/
-│   └── Breath of the Wild/
-├── DLCs/
-    └── Breath of the Wild/
+```
+ 💾 SD:/
+ ├─ 📂 Dumpling/
+ │  ├─ 📂 Games/
+ │  │  ├─ 📂 Breath of the Wild/
+ │  │  │  ├─ 📜 ...
+ │  ├─ 📂 Updates/
+ │  │  ├─ 📂 Breath of the Wild/
+ │  │  │  ├─ 📜 ...
+ │  ├─ 📂 DLCs/
+ │  │  ├─ 📂 Breath of the Wild/
+ │  │  │  ├─ 📜 ...
 ```
 
 Copy the entire `Dumpling` folder to a memorable location on your PC, e.g., `C:/Games/WiiU`.
@@ -80,10 +84,11 @@ Copy the entire `Dumpling` folder to a memorable location on your PC, e.g., `C:/
 
 If you plan to play on PC, you'll need **Cemu**, a Wii U emulator. Follow [this installation guide](https://cemu.cfw.guide/installing-cemu.html), which walks you through downloading, optimizing, and configuring the emulator for *Breath of the Wild*.
 
-Avoid YouTube tutorials—most are outdated or inaccurate.
+Avoid YouTube tutorials, most are outdated or inaccurate.
 
 **Common Cemu Mistakes to Avoid:**
-- Do **not** use version 2.0, as it’s experimental and unstable. Use version **2.1+**.
+- Do **not** use version 2.0, as it’s experimental and unstable. Use version **2.1+** or 1.26.2f.
+- In BotW's graphic packs under the `Mods` section make sure to ENABLE Extended Memory and **DISABLE Draw Distance**.
 
 ---
 
@@ -126,11 +131,11 @@ If these options don’t work, you can configure it manually.
    - **DLC Folder**: `.../Dumpling/DLCs/Breath of the Wild/content/0010`
 
 3. **Deployment Settings**:
-   - **Deploy Method**: `Copy` (console) or `Symlink/Hard Links` (Cemu)
+   - **Deploy Method**: `Copy` (console) or `Symlink (highly recommended)/Hard Links` (Cemu)
    - **Deploy Layout**: `With Named Folder`
    - **Output Folder**:
      - For Cemu:
-       - v1.26.2f: `.../Cemu/graphicPacks`
+       - v1.26.2f: `.../Cemu/graphicPacks` where `Cemu` is the folder containing your `Cemu.exe`
        - v2.1+: `C:/Users/YourUsername/AppData/Roaming/Cemu/graphicPacks`
      - For console: use a folder like `C:/ModPack`
 
@@ -170,12 +175,12 @@ If it doesn’t show up, revisit the guide and double-check your paths and deplo
    - [Wii U Plugin Loader (nightly)](https://github.com/Maschell/WiiUPluginLoader/releases)
    - [WUPS Sdcafiine (nightly)](https://github.com/Maschell/SDCafiine/releases/tag/SDCafiine-WUPS-v1.4-nightly-67aa461)
 
-2. Move the `wiiu` folders from both archives to the root of your SD card.
+2. Move the `wiiu` folders from both archives to the root of your SD card (merge the folders if asked).
 
 3. On the SD card, create the following structure:
 
    ```text
-   /sdcafiine/<BotW Title ID>/BreathOfTheWild_UKMM/
+   /sdcafiine/<BotW Title ID>/
    ```
 
    - Title IDs by region:
@@ -189,12 +194,14 @@ If it doesn’t show up, revisit the guide and double-check your paths and deplo
 <summary>Click to view final mod layout</summary>
 
 ```text
-SD:/
-└── sdcafiine/
-    └── <Your BotW Title ID>/
-        └── BreathOfTheWild_UKMM/
-            ├── aoc/
-            └── content/
+ 💾 SD:/
+ ├─ 📂 sdcafiine/
+ │  ├─ 📂 00050000101C9500 or 00050000101C9400 or 00050000101C9300/
+ │  │  ├─ 📂 BreathOfTheWild_UKMM/
+ │  │  │  ├─ 📂 aoc/
+ │  │  │  │  ├─ 📜 ...
+ │  │  │  ├─ 📂 content/
+ │  │  │  │  ├─ 📜 ...
 ```
 
 </details>

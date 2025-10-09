@@ -16,6 +16,7 @@ To play mods on actual hardware, you’ll need a modded Wii U. Modding your cons
 If your console is already modded with **Tiramisu**, you may proceed directly to the next section.
 
 While **Aroma** is a newer option, its implementation of **Sdcafiine**, the plugin required for loading mods, currently suffers from performance issues and instability. Therefore, we recommend using **Tiramisu** for now.
+If you already have Aroma setup, you can easily setup Tiramisu alongside it by following the instructions on [this page](https://wiiu.hacks.guide/aroma/finalizing-setup.html#booting-tiramisu-optional).
 
 To mod your console, we suggest following [this guide](https://web.archive.org/web/20240101140009/https://wiiu.hacks.guide/#/). For visual learners, you can supplement it with a video tutorial, but avoid following YouTube videos blindly. Always prefer the linked guide and **make a NAND backup** before proceeding.
 

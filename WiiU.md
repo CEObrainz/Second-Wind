@@ -97,7 +97,7 @@ Avoid YouTube tutorials, most are outdated or inaccurate.
 
 **UKMM** is the successor to **BCML**, developed by the same team. It’s faster, more stable, and actively maintained.
 
-1. Download the latest release from [GitHub](https://github.com/GingerAvalanche/ukmm/releases/latest). As of now, the latest version is `0.16.0`.
+1. Download the latest release from [GitHub](https://github.com/NiceneNerd/UKMM/releases/latest). As of now, the latest version is `0.17.0`.
    - Choose the `.zip` (portable) or `.msi` (installer) for Windows.
 
 2. Open UKMM. Go to the **Settings** tab before managing mods.
